@@ -1,0 +1,51 @@
+name: Java CI with Gradle
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./Task_1_1_1
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v5
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x gradlew
+
+      - name: Build and test
+        run: ./gradlew clean test
+
+      - name: Generate Jacoco report
+        run: ./gradlew jacocoTestReport
+
+      - name: Generate Javadoc
+        run: ./gradlew javadoc
+
+      - name: Copy Jacoco report to Javadoc folder
+        run: cp -r ./build/reports/jacoco/test/html ./build/docs/javadoc/jacoco-report
+
+      - name: Deploy Javadoc and Jacoco to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./Task_1_1_1/build/docs/javadoc   
+          destination_dir: ./Task_1_1_1
+          keep_files: false
+          publish_branch: gh-pages
