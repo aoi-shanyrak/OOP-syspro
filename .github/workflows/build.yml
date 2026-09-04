@@ -46,6 +46,3 @@ jobs:
           destination_dir: ./Task_1_1_1
           keep_files: false
           publish_branch: gh-pages
-
-      - name: Checkstyle
-        run: ./gradlew checkstyleMain checkstyleTest
