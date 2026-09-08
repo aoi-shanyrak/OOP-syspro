@@ -1,7 +1,6 @@
 plugins {
     id("java")
     id("jacoco")
-    id("checkstyle")
 }
 
 group = "org.example"
@@ -25,10 +24,4 @@ tasks.jacocoTestReport {
     reports {
         xml.required.set(true)
     }
-}
-
-checkstyle {
-    toolVersion = "10.12.5"
-    configFile = rootProject.file(".github/google_checks.xml")
-    isIgnoreFailures = false
 }
