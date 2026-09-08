@@ -1,6 +1,7 @@
 plugins {
     id("java")
     id("jacoco")
+    id("checkstyle")
 }
 
 group = "org.example"
@@ -18,13 +19,16 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
-    testLogging {
-        events("passed", "skipped", "failed")
-        showStandardStreams = true
-    }
 }
+
 tasks.jacocoTestReport {
     reports {
         xml.required.set(true)
     }
+}
+
+checkstyle {
+    toolVersion = "10.12.5"
+    configFile = rootProject.file(".github/google_checks.xml")
+    isIgnoreFailures = false
 }

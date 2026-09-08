@@ -38,14 +38,30 @@ jobs:
       - name: Generate Javadoc
         run: ./gradlew javadoc
 
-      - name: Copy Jacoco report to Javadoc folder
+      - name: Checkstyle
+        run: ./gradlew checkstyleMain checkstyleTest
+
+      - name: Upload Jacoco report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: jacoco-report
+          path: ./Task_1_1_1/build/reports/jacoco/test/html/
+
+      - name: Add coverage comment to PR
+        uses: Madrapps/jacoco-report@v1.6.1
+        with:
+          paths: ./Task_1_1_1/build/reports/jacoco/test/jacocoTestReport.xml
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Copy Jacoco to Javadoc folder (for Pages)
         run: cp -r ./build/reports/jacoco/test/html ./build/docs/javadoc/jacoco-report
 
       - name: Deploy Javadoc and Jacoco to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./Task_1_1_1/build/docs/javadoc   
+          publish_dir: ./Task_1_1_1/build/docs/javadoc
           destination_dir: ./Task_1_1_1
           keep_files: false
           publish_branch: gh-pages
+          

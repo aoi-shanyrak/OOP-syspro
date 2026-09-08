@@ -5,8 +5,8 @@ package org;
  */
 public class Heapsort {
     /**
-     * sorts given array in order
-     * @param arr array of integers
+     * sorts given array in order inplace
+     * @param arr array of integers (can be null)
      */
     public static void sort(int[] arr) {
         if (arr == null ||arr.length < 2) return;
