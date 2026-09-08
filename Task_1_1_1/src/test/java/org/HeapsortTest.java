@@ -16,6 +16,20 @@ class HeapsortTest {
     }
 
     @Test
+    void sort_zeroElement_doesNothing() {
+        int[] arr = {};
+        Heapsort.sort(arr);
+        assertArrayEquals(new int[] {}, arr);
+    }
+
+    @Test
+    void sort_oneElement_doesNothing() {
+        int[] arr = {1};
+        Heapsort.sort(arr);
+        assertArrayEquals(new int[] {1}, arr);
+    }
+
+    @Test
     void sort_twoElementsUnsorted_sorted() {
         int[] arr = {2, 1};
         Heapsort.sort(arr);
