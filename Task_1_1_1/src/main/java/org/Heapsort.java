@@ -1,15 +1,17 @@
 package org;
 
 /**
- * provides an inplace implementation of heapsort algorithm
+ * provides an inplace implementation of heapsort algorithm.
  */
 public class Heapsort {
     /**
-     * sorts given array in order inplace
+     * sorts given array in order inplace.
      * @param arr array of integers (can be null)
      */
     public static void sort(int[] arr) {
-        if (arr == null ||arr.length < 2) return;
+        if (arr == null || arr.length < 2) {
+            return;
+        }
 
         int n = arr.length;
 
@@ -24,7 +26,7 @@ public class Heapsort {
     }
 
     /**
-     * restores the max-heap property for subtree at index
+     * restores the max-heap property for subtree at index.
      * @param arr  array
      * @param size current size of array
      * @param idx root index of subtree to heapify
