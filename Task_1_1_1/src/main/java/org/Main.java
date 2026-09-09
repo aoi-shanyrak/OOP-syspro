@@ -3,11 +3,11 @@ package org;
 import java.util.Arrays;
 
 /**
- * demo run
+ * demo run.
  */
 public class Main {
     /**
-     * main function
+     * main function.
      * @param args not used
      */
     public static void main(String[] args) {
