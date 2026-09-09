@@ -50,7 +50,7 @@ public class Heapsort {
     }
 
     /**
-     * side method to swap elements in array
+     * side method to swap elements in array.
      * @param arr array
      * @param i   first index
      * @param j   second index
