@@ -14,7 +14,6 @@ public class Dealer extends Participant {
         }
     }
 
-    // Первая карта открыта, вторая скрыта
     public String describeHiddenHand() {
         return name + ": " + hand.getFirstCard() + ", [closed card]";
     }

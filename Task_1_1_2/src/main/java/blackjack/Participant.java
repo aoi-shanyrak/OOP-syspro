@@ -8,7 +8,6 @@ public abstract class Participant {
         this.name = name;
     }
 
-    // Каждый участник реализует свой ход сам
     public abstract void makeTurn(Deck deck);
 
     public String getName() {
