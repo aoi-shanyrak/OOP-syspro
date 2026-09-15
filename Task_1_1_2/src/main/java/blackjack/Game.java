@@ -2,9 +2,18 @@ package blackjack;
 
 import java.util.Scanner;
 
+/**
+ * Coordinates a full game of blackjack: creates the deck,
+ * deals cards, asks players for input, and resolves each round.
+ */
 public class Game {
+
     private final Scanner scanner = new Scanner(System.in);
 
+    /**
+     * Starts the main game loop: plays rounds until the user
+     * chooses to stop, then closes the input scanner.
+     */
     public void play() {
         System.out.println("-=<{( BLACKJACK )}>=-");
 
@@ -18,6 +27,11 @@ public class Game {
         scanner.close();
     }
 
+    /**
+     * Plays a single round: shuffles the deck, deals two cards to
+     * each participant, runs the player's and dealer's turns,
+     * and prints the result.
+     */
     private void playRound() {
         Deck deck = new Deck();
         deck.shuffle();
@@ -33,7 +47,6 @@ public class Game {
         System.out.println("\n" + dealer.describeHiddenHand());
         System.out.println(player.describeHand());
 
-        // Проверка блэкджеков
         if (player.isBlackjack() || dealer.isBlackjack()) {
             resolveBlackjack(player, dealer);
             return;
@@ -53,6 +66,13 @@ public class Game {
         resolveWinner(player, dealer);
     }
 
+    /**
+     * Handles the case where at least one participant has a
+     * natural blackjack and prints the outcome.
+     *
+     * @param player the player
+     * @param dealer the dealer
+     */
     private void resolveBlackjack(Player player, Dealer dealer) {
         System.out.println("\nShowing Dealer's cards:");
         System.out.println(dealer.describeHand());
@@ -66,6 +86,13 @@ public class Game {
         }
     }
 
+    /**
+     * Compares the player's and dealer's hands and prints the
+     * final round result.
+     *
+     * @param player the player
+     * @param dealer the dealer
+     */
     private void resolveWinner(Player player, Dealer dealer) {
         if (dealer.isBust()) {
             System.out.println("Dealer got too much! You won!");
@@ -86,6 +113,11 @@ public class Game {
         }
     }
 
+    /**
+     * Asks the user whether to play another round.
+     *
+     * @return {@code true} if the user entered {@code "y"} or {@code "yes"}
+     */
     private boolean askPlayAgain() {
         System.out.print("\nPlay again? (y/n): ");
         String again = scanner.nextLine().trim().toLowerCase();
