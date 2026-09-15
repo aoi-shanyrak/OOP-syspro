@@ -16,7 +16,7 @@ class ParticipantTest {
     @Test
     void nameAndHandWork() {
         Player p = player();
-        assertEquals("Вы", p.getName());
+        assertEquals("You", p.getName());
         assertNotNull(p.getHand());
     }
 
