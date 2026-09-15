@@ -1,5 +1,8 @@
 package blackjack;
 
+/**
+ * Represents the four suits of a standard playing card deck.
+ */
 public enum Suit {
     HEARTS("H"),
     DIAMONDS("D"),
@@ -12,6 +15,11 @@ public enum Suit {
         this.symbol = symbol;
     }
 
+    /**
+     * Returns the single-letter symbol of the suit.
+     *
+     * @return suit symbol, {@code "H"} for hearts
+     */
     public String getSymbol() {
         return symbol;
     }

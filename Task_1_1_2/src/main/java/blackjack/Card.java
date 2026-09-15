@@ -1,5 +1,8 @@
 package blackjack;
 
+/**
+ * Represents a single playing card with a suit and a rank.
+ */
 public class Card {
     private final Suit suit;
     private final Rank rank;

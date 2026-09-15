@@ -1,5 +1,8 @@
 package blackjack;
 
+/**
+ * Represents the thirteen ranks of a playing card and their blackjack values.
+ */
 public enum Rank {
     TWO(2, "2"),
     THREE(3, "3"),
@@ -23,14 +26,29 @@ public enum Rank {
         this.symbol = symbol;
     }
 
+    /**
+     * Returns the blackjack point value of this rank.
+     *
+     * @return point value (2-11)
+     */
     public int getValue() {
         return value;
     }
 
+    /**
+     * Returns the short string representation of this rank.
+     *
+     * @return symbol such as {@code "2"}, {@code "10"}, {@code "K"} or {@code "A"}
+     */
     public String getSymbol() {
         return symbol;
     }
 
+    /**
+     * Returns the symbol of this rank.
+     *
+     * @return symbol of the rank
+     */
     @Override
     public String toString() {
         return symbol;
