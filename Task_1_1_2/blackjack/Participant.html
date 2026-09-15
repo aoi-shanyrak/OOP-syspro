@@ -80,6 +80,10 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public abstract class </span><span class="element-name type-name-label">Participant</span>
 <span class="extends-implements">extends <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></span></div>
+<div class="block">Common base class for everyone sitting at the blackjack table,
+ such as the player and the dealer.
+ Holds the shared hand and exposes blackjack-related helpers,
+ while forcing subclasses to implement their own turn logic.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -94,10 +98,14 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>protected final <a href="Hand.html" title="class in blackjack">Hand</a></code></div>
 <div class="col-second even-row-color"><code><a href="#hand" class="member-name-link">hand</a></code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Hand of cards held by the participant.</div>
+</div>
 <div class="col-first odd-row-color"><code>protected final <a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color"><code><a href="#name" class="member-name-link">name</a></code></div>
-<div class="col-last odd-row-color">&nbsp;</div>
+<div class="col-last odd-row-color">
+<div class="block">Display name of the participant.</div>
+</div>
 </div>
 </section>
 </li>
@@ -112,7 +120,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color"><code>protected </code></div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(java.lang.String)" class="member-name-link">Participant</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a participant with the given display name.</div>
+</div>
 </div>
 </section>
 </li>
@@ -129,28 +139,46 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#addCard(blackjack.Card)" class="member-name-link">addCard</a><wbr>(<a href="Card.html" title="class in blackjack">Card</a>&nbsp;card)</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Adds a card to this participant's hand.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#describeHand()" class="member-name-link">describeHand</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a formatted string with the participant's name,
+ cards and total value.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Hand.html" title="class in blackjack">Hand</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getHand()" class="member-name-link">getHand</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the participant's hand.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getName()" class="member-name-link">getName</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the participant's name.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the total point value of the participant's hand.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isBlackjack()" class="member-name-link">isBlackjack</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether the participant's hand is a natural blackjack.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isBust()" class="member-name-link">isBust</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns whether the participant's hand is bust.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code>abstract void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3"><code><a href="#makeTurn(blackjack.Deck)" class="member-name-link">makeTurn</a><wbr>(<a href="Deck.html" title="class in blackjack">Deck</a>&nbsp;deck)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab3">
+<div class="block">Performs this participant's turn, drawing cards according
+ to the participant's own rules.</div>
+</div>
 </div>
 </div>
 </div>
@@ -172,12 +200,14 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="name">
 <h3>name</h3>
 <div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">name</span></div>
+<div class="block">Display name of the participant.</div>
 </section>
 </li>
 <li>
 <section class="detail" id="hand">
 <h3>hand</h3>
 <div class="member-signature"><span class="modifiers">protected final</span>&nbsp;<span class="return-type"><a href="Hand.html" title="class in blackjack">Hand</a></span>&nbsp;<span class="element-name">hand</span></div>
+<div class="block">Hand of cards held by the participant.</div>
 </section>
 </li>
 </ul>
@@ -192,6 +222,11 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;(java.lang.String)">
 <h3>Participant</h3>
 <div class="member-signature"><span class="modifiers">protected</span>&nbsp;<span class="element-name">Participant</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a>&nbsp;name)</span></div>
+<div class="block">Creates a participant with the given display name.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>name</code> - name shown in console output</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -206,48 +241,90 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="makeTurn(blackjack.Deck)">
 <h3>makeTurn</h3>
 <div class="member-signature"><span class="modifiers">public abstract</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">makeTurn</span><wbr><span class="parameters">(<a href="Deck.html" title="class in blackjack">Deck</a>&nbsp;deck)</span></div>
+<div class="block">Performs this participant's turn, drawing cards according
+ to the participant's own rules.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>deck</code> - the deck to draw cards from</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getName()">
 <h3>getName</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">getName</span>()</div>
+<div class="block">Returns the participant's name.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>display name</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getHand()">
 <h3>getHand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Hand.html" title="class in blackjack">Hand</a></span>&nbsp;<span class="element-name">getHand</span>()</div>
+<div class="block">Returns the participant's hand.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hand object</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="addCard(blackjack.Card)">
 <h3>addCard</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">addCard</span><wbr><span class="parameters">(<a href="Card.html" title="class in blackjack">Card</a>&nbsp;card)</span></div>
+<div class="block">Adds a card to this participant's hand.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>card</code> - card to add</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getValue</span>()</div>
+<div class="block">Returns the total point value of the participant's hand.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>hand value</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="isBust()">
 <h3>isBust</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isBust</span>()</div>
+<div class="block">Returns whether the participant's hand is bust.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if hand value exceeds 21</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="isBlackjack()">
 <h3>isBlackjack</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isBlackjack</span>()</div>
+<div class="block">Returns whether the participant's hand is a natural blackjack.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if hand is blackjack</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="describeHand()">
 <h3>describeHand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">describeHand</span>()</div>
+<div class="block">Returns a formatted string with the participant's name,
+ cards and total value.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>description of the hand</dd>
+</dl>
 </section>
 </li>
 </ul>

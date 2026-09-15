@@ -90,7 +90,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E(blackjack.Suit,blackjack.Rank)" class="member-name-link">Card</a><wbr>(<a href="Suit.html" title="enum class in blackjack">Suit</a>&nbsp;suit,
  <a href="Rank.html" title="enum class in blackjack">Rank</a>&nbsp;rank)</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a card with the given suit and rank.</div>
+</div>
 </div>
 </section>
 </li>
@@ -107,16 +109,25 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Rank.html" title="enum class in blackjack">Rank</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getRank()" class="member-name-link">getRank</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the rank of this card.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="Suit.html" title="enum class in blackjack">Suit</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getSuit()" class="member-name-link">getSuit</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the suit of this card.</div>
+</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns the blackjack point value of this card.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#toString()" class="member-name-link">toString</a>()</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a human-readable representation of the card,
+ for example <code>"K S"</code> or <code>"10 H"</code>.</div>
+</div>
 </div>
 </div>
 </div>
@@ -139,6 +150,12 @@ loadScripts(document, 'script');</script>
 <h3>Card</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Card</span><wbr><span class="parameters">(<a href="Suit.html" title="enum class in blackjack">Suit</a>&nbsp;suit,
  <a href="Rank.html" title="enum class in blackjack">Rank</a>&nbsp;rank)</span></div>
+<div class="block">Creates a card with the given suit and rank.</div>
+<dl class="notes">
+<dt>Parameters:</dt>
+<dd><code>suit</code> - the card suit</dd>
+<dd><code>rank</code> - the card rank</dd>
+</dl>
 </section>
 </li>
 </ul>
@@ -153,27 +170,46 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="getSuit()">
 <h3>getSuit</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Suit.html" title="enum class in blackjack">Suit</a></span>&nbsp;<span class="element-name">getSuit</span>()</div>
+<div class="block">Returns the suit of this card.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the suit</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getRank()">
 <h3>getRank</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="Rank.html" title="enum class in blackjack">Rank</a></span>&nbsp;<span class="element-name">getRank</span>()</div>
+<div class="block">Returns the rank of this card.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>the rank</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="getValue()">
 <h3>getValue</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getValue</span>()</div>
+<div class="block">Returns the blackjack point value of this card.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>point value based on the rank</dd>
+</dl>
 </section>
 </li>
 <li>
 <section class="detail" id="toString()">
 <h3>toString</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">toString</span>()</div>
+<div class="block">Returns a human-readable representation of the card,
+ for example <code>"K S"</code> or <code>"10 H"</code>.</div>
 <dl class="notes">
 <dt>Overrides:</dt>
 <dd><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html#toString()" title="class or interface in java.lang" class="external-link">toString</a></code>&nbsp;in class&nbsp;<code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/Object.html" title="class or interface in java.lang" class="external-link">Object</a></code></dd>
+<dt>Returns:</dt>
+<dd>string combining rank and suit symbol</dd>
 </dl>
 </section>
 </li>

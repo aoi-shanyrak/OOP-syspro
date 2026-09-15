@@ -78,6 +78,8 @@ loadScripts(document, 'script');</script>
 <hr>
 <div class="type-signature"><span class="modifiers">public class </span><span class="element-name type-name-label">Dealer</span>
 <span class="extends-implements">extends <a href="Participant.html" title="class in blackjack">Participant</a></span></div>
+<div class="block">Dealer controlled by fixed casino rules: draws cards until
+ the hand value reaches at least 17.</div>
 </section>
 <section class="summary">
 <ul class="summary-list">
@@ -99,7 +101,9 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-first">Constructor</div>
 <div class="table-header col-last">Description</div>
 <div class="col-constructor-name even-row-color"><code><a href="#%3Cinit%3E()" class="member-name-link">Dealer</a>()</code></div>
-<div class="col-last even-row-color">&nbsp;</div>
+<div class="col-last even-row-color">
+<div class="block">Creates a dealer with the default name.</div>
+</div>
 </div>
 </section>
 </li>
@@ -116,10 +120,16 @@ loadScripts(document, 'script');</script>
 <div class="table-header col-last">Description</div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#describeHiddenHand()" class="member-name-link">describeHiddenHand</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Returns a string showing only the dealer's first card,
+ keeping the second card hidden from the player.</div>
+</div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#makeTurn(blackjack.Deck)" class="member-name-link">makeTurn</a><wbr>(<a href="Deck.html" title="class in blackjack">Deck</a>&nbsp;deck)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">&nbsp;</div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Runs the dealer's turn: keeps drawing while the hand is
+ below 17 and stops once 17 or more is reached.</div>
+</div>
 </div>
 </div>
 </div>
@@ -144,6 +154,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="&lt;init&gt;()">
 <h3>Dealer</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="element-name">Dealer</span>()</div>
+<div class="block">Creates a dealer with the default name.</div>
 </section>
 </li>
 </ul>
@@ -158,9 +169,13 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="makeTurn(blackjack.Deck)">
 <h3>makeTurn</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">makeTurn</span><wbr><span class="parameters">(<a href="Deck.html" title="class in blackjack">Deck</a>&nbsp;deck)</span></div>
+<div class="block">Runs the dealer's turn: keeps drawing while the hand is
+ below 17 and stops once 17 or more is reached.</div>
 <dl class="notes">
 <dt>Specified by:</dt>
 <dd><code><a href="Participant.html#makeTurn(blackjack.Deck)">makeTurn</a></code>&nbsp;in class&nbsp;<code><a href="Participant.html" title="class in blackjack">Participant</a></code></dd>
+<dt>Parameters:</dt>
+<dd><code>deck</code> - the deck to draw cards from</dd>
 </dl>
 </section>
 </li>
@@ -168,6 +183,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="describeHiddenHand()">
 <h3>describeHiddenHand</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type"><a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/lang/String.html" title="class or interface in java.lang" class="external-link">String</a></span>&nbsp;<span class="element-name">describeHiddenHand</span>()</div>
+<div class="block">Returns a string showing only the dealer's first card,
+ keeping the second card hidden from the player.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd>description with one visible card</dd>
+</dl>
 </section>
 </li>
 </ul>

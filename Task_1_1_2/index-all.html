@@ -54,9 +54,13 @@ loadScripts(document, 'script');</script>
 <dt><a href="blackjack/Rank.html#ACE" class="member-name-link">ACE</a> - Enum constant in enum class blackjack.<a href="blackjack/Rank.html" title="enum class in blackjack">Rank</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="blackjack/Hand.html#add(blackjack.Card)" class="member-name-link">add(Card)</a> - Method in class blackjack.<a href="blackjack/Hand.html" title="class in blackjack">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Adds a card to the hand.</div>
+</dd>
 <dt><a href="blackjack/Participant.html#addCard(blackjack.Card)" class="member-name-link">addCard(Card)</a> - Method in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Adds a card to this participant's hand.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:B">B</h2>
 <dl class="index">
@@ -70,28 +74,47 @@ loadScripts(document, 'script');</script>
 <div class="block">Represents a single playing card with a suit and a rank.</div>
 </dd>
 <dt><a href="blackjack/Card.html#%3Cinit%3E(blackjack.Suit,blackjack.Rank)" class="member-name-link">Card(Suit, Rank)</a> - Constructor for class blackjack.<a href="blackjack/Card.html" title="class in blackjack">Card</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Creates a card with the given suit and rank.</div>
+</dd>
 <dt><a href="blackjack/Suit.html#CLUBS" class="member-name-link">CLUBS</a> - Enum constant in enum class blackjack.<a href="blackjack/Suit.html" title="enum class in blackjack">Suit</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:D">D</h2>
 <dl class="index">
 <dt><a href="blackjack/Dealer.html" class="type-name-link" title="class in blackjack">Dealer</a> - Class in <a href="blackjack/package-summary.html">blackjack</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Dealer controlled by fixed casino rules: draws cards until
+ the hand value reaches at least 17.</div>
+</dd>
 <dt><a href="blackjack/Dealer.html#%3Cinit%3E()" class="member-name-link">Dealer()</a> - Constructor for class blackjack.<a href="blackjack/Dealer.html" title="class in blackjack">Dealer</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Creates a dealer with the default name.</div>
+</dd>
 <dt><a href="blackjack/Deck.html" class="type-name-link" title="class in blackjack">Deck</a> - Class in <a href="blackjack/package-summary.html">blackjack</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Represents a standard 52-card deck of playing cards.</div>
+</dd>
 <dt><a href="blackjack/Deck.html#%3Cinit%3E()" class="member-name-link">Deck()</a> - Constructor for class blackjack.<a href="blackjack/Deck.html" title="class in blackjack">Deck</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Creates a new deck containing 52 cards in a standard order.</div>
+</dd>
 <dt><a href="blackjack/Participant.html#describeHand()" class="member-name-link">describeHand()</a> - Method in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns a formatted string with the participant's name,
+ cards and total value.</div>
+</dd>
 <dt><a href="blackjack/Dealer.html#describeHiddenHand()" class="member-name-link">describeHiddenHand()</a> - Method in class blackjack.<a href="blackjack/Dealer.html" title="class in blackjack">Dealer</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns a string showing only the dealer's first card,
+ keeping the second card hidden from the player.</div>
+</dd>
 <dt><a href="blackjack/Suit.html#DIAMONDS" class="member-name-link">DIAMONDS</a> - Enum constant in enum class blackjack.<a href="blackjack/Suit.html" title="enum class in blackjack">Suit</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="blackjack/Deck.html#draw()" class="member-name-link">draw()</a> - Method in class blackjack.<a href="blackjack/Deck.html" title="class in blackjack">Deck</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Removes and returns the top card of the deck.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:E">E</h2>
 <dl class="index">
@@ -108,21 +131,36 @@ loadScripts(document, 'script');</script>
 <h2 class="title" id="I:G">G</h2>
 <dl class="index">
 <dt><a href="blackjack/Game.html" class="type-name-link" title="class in blackjack">Game</a> - Class in <a href="blackjack/package-summary.html">blackjack</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Coordinates a full game of blackjack: creates the deck,
+ deals cards, asks players for input, and resolves each round.</div>
+</dd>
 <dt><a href="blackjack/Game.html#%3Cinit%3E()" class="member-name-link">Game()</a> - Constructor for class blackjack.<a href="blackjack/Game.html" title="class in blackjack">Game</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="blackjack/Hand.html#getCards()" class="member-name-link">getCards()</a> - Method in class blackjack.<a href="blackjack/Hand.html" title="class in blackjack">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the list of cards currently in the hand.</div>
+</dd>
 <dt><a href="blackjack/Hand.html#getFirstCard()" class="member-name-link">getFirstCard()</a> - Method in class blackjack.<a href="blackjack/Hand.html" title="class in blackjack">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the first card dealt to the hand.</div>
+</dd>
 <dt><a href="blackjack/Participant.html#getHand()" class="member-name-link">getHand()</a> - Method in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the participant's hand.</div>
+</dd>
 <dt><a href="blackjack/Participant.html#getName()" class="member-name-link">getName()</a> - Method in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the participant's name.</div>
+</dd>
 <dt><a href="blackjack/Card.html#getRank()" class="member-name-link">getRank()</a> - Method in class blackjack.<a href="blackjack/Card.html" title="class in blackjack">Card</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the rank of this card.</div>
+</dd>
 <dt><a href="blackjack/Card.html#getSuit()" class="member-name-link">getSuit()</a> - Method in class blackjack.<a href="blackjack/Card.html" title="class in blackjack">Card</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the suit of this card.</div>
+</dd>
 <dt><a href="blackjack/Rank.html#getSymbol()" class="member-name-link">getSymbol()</a> - Method in enum class blackjack.<a href="blackjack/Rank.html" title="enum class in blackjack">Rank</a></dt>
 <dd>
 <div class="block">Returns the short string representation of this rank.</div>
@@ -132,11 +170,17 @@ loadScripts(document, 'script');</script>
 <div class="block">Returns the single-letter symbol of the suit.</div>
 </dd>
 <dt><a href="blackjack/Card.html#getValue()" class="member-name-link">getValue()</a> - Method in class blackjack.<a href="blackjack/Card.html" title="class in blackjack">Card</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the blackjack point value of this card.</div>
+</dd>
 <dt><a href="blackjack/Hand.html#getValue()" class="member-name-link">getValue()</a> - Method in class blackjack.<a href="blackjack/Hand.html" title="class in blackjack">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the total blackjack value of the hand.</div>
+</dd>
 <dt><a href="blackjack/Participant.html#getValue()" class="member-name-link">getValue()</a> - Method in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the total point value of the participant's hand.</div>
+</dd>
 <dt><a href="blackjack/Rank.html#getValue()" class="member-name-link">getValue()</a> - Method in enum class blackjack.<a href="blackjack/Rank.html" title="enum class in blackjack">Rank</a></dt>
 <dd>
 <div class="block">Returns the blackjack point value of this rank.</div>
@@ -145,9 +189,13 @@ loadScripts(document, 'script');</script>
 <h2 class="title" id="I:H">H</h2>
 <dl class="index">
 <dt><a href="blackjack/Participant.html#hand" class="member-name-link">hand</a> - Variable in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Hand of cards held by the participant.</div>
+</dd>
 <dt><a href="blackjack/Hand.html" class="type-name-link" title="class in blackjack">Hand</a> - Class in <a href="blackjack/package-summary.html">blackjack</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Represents a hand of cards held by a participant.</div>
+</dd>
 <dt><a href="blackjack/Hand.html#%3Cinit%3E()" class="member-name-link">Hand()</a> - Constructor for class blackjack.<a href="blackjack/Hand.html" title="class in blackjack">Hand</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="blackjack/Suit.html#HEARTS" class="member-name-link">HEARTS</a> - Enum constant in enum class blackjack.<a href="blackjack/Suit.html" title="enum class in blackjack">Suit</a></dt>
@@ -156,13 +204,22 @@ loadScripts(document, 'script');</script>
 <h2 class="title" id="I:I">I</h2>
 <dl class="index">
 <dt><a href="blackjack/Hand.html#isBlackjack()" class="member-name-link">isBlackjack()</a> - Method in class blackjack.<a href="blackjack/Hand.html" title="class in blackjack">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns whether the hand is a natural blackjack,
+ i.e.</div>
+</dd>
 <dt><a href="blackjack/Participant.html#isBlackjack()" class="member-name-link">isBlackjack()</a> - Method in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns whether the participant's hand is a natural blackjack.</div>
+</dd>
 <dt><a href="blackjack/Hand.html#isBust()" class="member-name-link">isBust()</a> - Method in class blackjack.<a href="blackjack/Hand.html" title="class in blackjack">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns whether the hand value exceeds 21.</div>
+</dd>
 <dt><a href="blackjack/Participant.html#isBust()" class="member-name-link">isBust()</a> - Method in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns whether the participant's hand is bust.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:J">J</h2>
 <dl class="index">
@@ -177,37 +234,64 @@ loadScripts(document, 'script');</script>
 <h2 class="title" id="I:M">M</h2>
 <dl class="index">
 <dt><a href="blackjack/Main.html#main(java.lang.String%5B%5D)" class="member-name-link">main(String[])</a> - Static method in class blackjack.<a href="blackjack/Main.html" title="class in blackjack">Main</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Starts the game.</div>
+</dd>
 <dt><a href="blackjack/Main.html" class="type-name-link" title="class in blackjack">Main</a> - Class in <a href="blackjack/package-summary.html">blackjack</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Entry point of the blackjack console application.</div>
+</dd>
 <dt><a href="blackjack/Main.html#%3Cinit%3E()" class="member-name-link">Main()</a> - Constructor for class blackjack.<a href="blackjack/Main.html" title="class in blackjack">Main</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="blackjack/Dealer.html#makeTurn(blackjack.Deck)" class="member-name-link">makeTurn(Deck)</a> - Method in class blackjack.<a href="blackjack/Dealer.html" title="class in blackjack">Dealer</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Runs the dealer's turn: keeps drawing while the hand is
+ below 17 and stops once 17 or more is reached.</div>
+</dd>
 <dt><a href="blackjack/Participant.html#makeTurn(blackjack.Deck)" class="member-name-link">makeTurn(Deck)</a> - Method in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Performs this participant's turn, drawing cards according
+ to the participant's own rules.</div>
+</dd>
 <dt><a href="blackjack/Player.html#makeTurn(blackjack.Deck)" class="member-name-link">makeTurn(Deck)</a> - Method in class blackjack.<a href="blackjack/Player.html" title="class in blackjack">Player</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Runs the player's turn: repeatedly asks for <code>h</code> (hit)
+ or <code>s</code> (stand) until the player stands or busts.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:N">N</h2>
 <dl class="index">
 <dt><a href="blackjack/Participant.html#name" class="member-name-link">name</a> - Variable in class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Display name of the participant.</div>
+</dd>
 <dt><a href="blackjack/Rank.html#NINE" class="member-name-link">NINE</a> - Enum constant in enum class blackjack.<a href="blackjack/Rank.html" title="enum class in blackjack">Rank</a></dt>
 <dd>&nbsp;</dd>
 </dl>
 <h2 class="title" id="I:P">P</h2>
 <dl class="index">
 <dt><a href="blackjack/Participant.html" class="type-name-link" title="class in blackjack">Participant</a> - Class in <a href="blackjack/package-summary.html">blackjack</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Common base class for everyone sitting at the blackjack table,
+ such as the player and the dealer.</div>
+</dd>
 <dt><a href="blackjack/Participant.html#%3Cinit%3E(java.lang.String)" class="member-name-link">Participant(String)</a> - Constructor for class blackjack.<a href="blackjack/Participant.html" title="class in blackjack">Participant</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Creates a participant with the given display name.</div>
+</dd>
 <dt><a href="blackjack/Game.html#play()" class="member-name-link">play()</a> - Method in class blackjack.<a href="blackjack/Game.html" title="class in blackjack">Game</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Starts the main game loop: plays rounds until the user
+ chooses to stop, then closes the input scanner.</div>
+</dd>
 <dt><a href="blackjack/Player.html" class="type-name-link" title="class in blackjack">Player</a> - Class in <a href="blackjack/package-summary.html">blackjack</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Human player controlled via console input.</div>
+</dd>
 <dt><a href="blackjack/Player.html#%3Cinit%3E(java.util.Scanner)" class="member-name-link">Player(Scanner)</a> - Constructor for class blackjack.<a href="blackjack/Player.html" title="class in blackjack">Player</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Creates a player that reads commands from the given scanner.</div>
+</dd>
 </dl>
 <h2 class="title" id="I:Q">Q</h2>
 <dl class="index">
@@ -226,13 +310,19 @@ loadScripts(document, 'script');</script>
 <dt><a href="blackjack/Rank.html#SEVEN" class="member-name-link">SEVEN</a> - Enum constant in enum class blackjack.<a href="blackjack/Rank.html" title="enum class in blackjack">Rank</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="blackjack/Deck.html#shuffle()" class="member-name-link">shuffle()</a> - Method in class blackjack.<a href="blackjack/Deck.html" title="class in blackjack">Deck</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Shuffles the cards in the deck using a random order.</div>
+</dd>
 <dt><a href="blackjack/Rank.html#SIX" class="member-name-link">SIX</a> - Enum constant in enum class blackjack.<a href="blackjack/Rank.html" title="enum class in blackjack">Rank</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="blackjack/Deck.html#size()" class="member-name-link">size()</a> - Method in class blackjack.<a href="blackjack/Deck.html" title="class in blackjack">Deck</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the number of remaining cards in the deck.</div>
+</dd>
 <dt><a href="blackjack/Hand.html#size()" class="member-name-link">size()</a> - Method in class blackjack.<a href="blackjack/Hand.html" title="class in blackjack">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns the number of cards in the hand.</div>
+</dd>
 <dt><a href="blackjack/Suit.html#SPADES" class="member-name-link">SPADES</a> - Enum constant in enum class blackjack.<a href="blackjack/Suit.html" title="enum class in blackjack">Suit</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="blackjack/Suit.html" class="type-name-link" title="enum class in blackjack">Suit</a> - Enum Class in <a href="blackjack/package-summary.html">blackjack</a></dt>
@@ -247,9 +337,15 @@ loadScripts(document, 'script');</script>
 <dt><a href="blackjack/Rank.html#THREE" class="member-name-link">THREE</a> - Enum constant in enum class blackjack.<a href="blackjack/Rank.html" title="enum class in blackjack">Rank</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="blackjack/Card.html#toString()" class="member-name-link">toString()</a> - Method in class blackjack.<a href="blackjack/Card.html" title="class in blackjack">Card</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns a human-readable representation of the card,
+ for example <code>"K S"</code> or <code>"10 H"</code>.</div>
+</dd>
 <dt><a href="blackjack/Hand.html#toString()" class="member-name-link">toString()</a> - Method in class blackjack.<a href="blackjack/Hand.html" title="class in blackjack">Hand</a></dt>
-<dd>&nbsp;</dd>
+<dd>
+<div class="block">Returns a comma-separated representation of the hand,
+ for example <code>"A H, K S"</code>.</div>
+</dd>
 <dt><a href="blackjack/Rank.html#toString()" class="member-name-link">toString()</a> - Method in enum class blackjack.<a href="blackjack/Rank.html" title="enum class in blackjack">Rank</a></dt>
 <dd>
 <div class="block">Returns the symbol of this rank.</div>
