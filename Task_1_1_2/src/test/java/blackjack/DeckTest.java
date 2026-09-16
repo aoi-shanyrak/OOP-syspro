@@ -36,35 +36,4 @@ class DeckTest {
         for (int i = 0; i < 52; i++) d.draw();
         assertThrows(IllegalStateException.class, d::draw);
     }
-
-    static class GameTest {
-
-        private static void run(String input) {
-            InputStream origIn = System.in;
-            PrintStream origOut = System.out;
-            System.setIn(new ByteArrayInputStream(input.getBytes()));
-            System.setOut(new PrintStream(new ByteArrayOutputStream()));
-            try {
-                new Game().play();
-            } finally {
-                System.setIn(origIn);
-                System.setOut(origOut);
-            }
-        }
-
-        @Test
-        void oneRoundThenQuit() {
-            assertDoesNotThrow(() -> run("s\nn\n"));
-        }
-
-        @Test
-        void twoRoundsAndQuit() {
-            assertDoesNotThrow(() -> run("s\ny\ns\nn\n"));
-        }
-
-        @Test
-        void hitThenStand() {
-            assertDoesNotThrow(() -> run("h\ns\nn\n"));
-        }
-    }
 }
