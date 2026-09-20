@@ -5,6 +5,7 @@ import java.util.Scanner;
 
 /**
  * Interactive read-eval-print loop for working with expressions.
+ *
  * <p>
  * The first non-empty input line is parsed as an expression.
  * Subsequent lines are treated as commands: {@code eval},
@@ -49,8 +50,12 @@ public class Repl {
         while (scanner.hasNextLine()) {
             out.print("> ");
             String line = scanner.nextLine().trim();
-            if (line.isEmpty()) continue;
-            if (isExit(line)) break;
+            if (line.isEmpty()) {
+                continue;
+            }
+            if (isExit(line)) {
+                break;
+            }
             handle(line);
         }
     }
@@ -70,12 +75,15 @@ public class Repl {
         String arg = parts.length > 1 ? parts[1].trim() : "";
 
         switch (command) {
-            case "eval":       doEval(arg);       break;
-            case "derivative": doDerivative(arg); break;
-            case "simplify":   doSimplify();      break;
-            case "print":      doPrint();         break;
-            case "new":        current = null;    out.println("Enter a new expression:"); break;
-            default:           loadExpression(line);
+            case "eval"       -> doEval(arg);
+            case "derivative" -> doDerivative(arg);
+            case "simplify"   -> doSimplify();
+            case "print"      -> doPrint();
+            case "new"        -> {
+                current = null;
+                out.println("Enter a new expression:");
+            }
+            default           -> loadExpression(line);
         }
     }
 

@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests for the {@code simplify} logic across all operations.
+ */
 class SimplifyTest {
 
     private static String s(Expression e) {

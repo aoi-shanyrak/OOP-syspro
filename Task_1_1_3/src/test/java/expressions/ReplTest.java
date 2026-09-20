@@ -9,6 +9,9 @@ import java.util.Scanner;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests for {@link Repl}.
+ */
 class ReplTest {
 
     private static String runRepl(String input) {

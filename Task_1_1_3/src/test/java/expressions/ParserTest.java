@@ -4,6 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+/**
+ * Tests for {@link Parser}.
+ */
 class ParserTest {
 
     private static String getParsed(String input) {

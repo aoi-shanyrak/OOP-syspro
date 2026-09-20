@@ -5,7 +5,7 @@ import java.io.PrintStream;
 
 final class TestOutput {
 
-    private TestOutput() {}   // нельзя создать экземпляр
+    private TestOutput() {}
 
     static String capture(Expression e) {
         PrintStream orig = System.out;
