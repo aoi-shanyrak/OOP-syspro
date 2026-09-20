@@ -48,8 +48,12 @@ public class Number extends Expression {
     /** {@inheritDoc} */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Number)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Number)) {
+            return false;
+        }
         Number other = (Number) o;
         return this.value == other.value;
     }

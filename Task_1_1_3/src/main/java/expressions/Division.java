@@ -22,8 +22,12 @@ public class Division extends Operation {
      */
     @Override
     protected Expression simplifyOp(Expression l, Expression r) {
-        if (isZero(l)) return new Number(0);
-        if (isOne(r)) return l;
+        if (isZero(l)) {
+            return new Number(0);
+        }
+        if (isOne(r)) {
+            return l;
+        }
         return collapseIfConstant(new Division(l, r));
     }
 

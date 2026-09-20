@@ -4,6 +4,7 @@ import java.io.PrintStream;
 
 /**
  * Base type for all nodes of a mathematical expression tree.
+ *
  * <p>
  * Concrete subclasses represent constants, variables and binary
  * operations. Each node knows how to print itself, compute its

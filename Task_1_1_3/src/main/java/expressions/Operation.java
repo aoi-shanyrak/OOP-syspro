@@ -151,7 +151,9 @@ public abstract class Operation extends Expression {
      * @return {@code true} if a {@link Variable} occurs anywhere in the tree
      */
     protected static boolean hasVariables(Expression e) {
-        if (e instanceof Variable) return true;
+        if (e instanceof Variable) {
+            return true;
+        }
         if (e instanceof Operation) {
             Operation op = (Operation) e;
             return hasVariables(op.getLeft()) || hasVariables(op.getRight());

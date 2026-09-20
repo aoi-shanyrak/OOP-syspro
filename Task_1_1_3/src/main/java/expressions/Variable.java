@@ -57,8 +57,12 @@ public class Variable extends Expression {
     /** {@inheritDoc} */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (!(o instanceof Variable)) return false;
+        if (this == o) {
+            return true;
+        }
+        if (!(o instanceof Variable)) {
+            return false;
+        }
         Variable other = (Variable) o;
         return this.name.equals(other.name);
     }
