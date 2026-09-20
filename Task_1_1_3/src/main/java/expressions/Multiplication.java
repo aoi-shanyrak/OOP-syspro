@@ -20,6 +20,7 @@ public class Multiplication extends Operation {
      * Applies the rules {@code 0 * x -> 0}, {@code x * 0 -> 0},
      * {@code 1 * x -> x} and {@code x * 1 -> x}, then collapses
      * to a number if no variables remain.
+     *
      * <p>
      * Zero rules are checked before one rules, so {@code 0 * 1}
      * simplifies to {@code 0}.
