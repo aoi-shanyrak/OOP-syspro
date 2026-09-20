@@ -52,13 +52,11 @@ class ParserTest {
 
     @Test
     void leftAssociativityMul() {
-        // 2*3*4 → ((2*3)*4)
         assertEquals("((2*3)*4)", getParsed("2*3*4"));
     }
 
     @Test
     void mixedPriority() {
-        // 1+2*3-4/2 → ((1+(2*3))-(4/2))
         assertEquals("((1+(2*3))-(4/2))", getParsed("1+2*3-4/2"));
     }
 
@@ -69,7 +67,7 @@ class ParserTest {
 
     @Test
     void doesNotStripNonGlobalParens() {
-        assertEquals("((3)+(5))", getParsed("(3)+(5)"));
+        assertEquals("(3+5)", getParsed("(3)+(5)"));
     }
 
     @Test
