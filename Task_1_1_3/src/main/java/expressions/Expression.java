@@ -2,6 +2,8 @@ package expressions;
 
 public abstract class Expression {
 
+    public abstract Expression simplify();
+
     public abstract Expression derivative(String var);
 
     public abstract int eval(String assigments);

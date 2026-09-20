@@ -7,6 +7,13 @@ public class Subtraction extends Operation {
     }
 
     @Override
+    protected Expression simplifyOp(Expression l, Expression r) {
+        if (l.equals(r)) return new Number(0);
+        if (isZero(r)) return l;
+        return collapseIfConstant(new Subtraction(l, r));
+    }
+
+    @Override
     public Expression derivative(String var) {
         return new Subtraction(left.derivative(var), right.derivative(var));
     }

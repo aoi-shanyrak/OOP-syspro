@@ -7,6 +7,13 @@ public class Division extends Operation {
     }
 
     @Override
+    protected Expression simplifyOp(Expression l, Expression r) {
+        if (isZero(l)) return new Number(0);
+        if (isOne(r)) return l;
+        return collapseIfConstant(new Division(l, r));
+    }
+
+    @Override
     public Expression derivative(String var) {
         return new Division(
                 new Subtraction(

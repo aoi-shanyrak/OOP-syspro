@@ -12,6 +12,39 @@ public abstract class Operation extends Expression {
     }
 
     @Override
+    public Expression simplify() {
+        Expression l = left.simplify();
+        Expression r = right.simplify();
+        return simplifyOp(l, r);
+    }
+
+    protected abstract Expression simplifyOp(Expression l, Expression r);
+
+    protected static boolean isZero(Expression e) {
+        return e instanceof Number && ((Number) e).getValue() == 0;
+    }
+
+    protected static boolean isOne(Expression e) {
+        return e instanceof Number && ((Number) e).getValue() == 1;
+    }
+
+    protected static boolean hasVariables(Expression e) {
+        if (e instanceof Variable) return true;
+        if (e instanceof Operation) {
+            Operation op = (Operation) e;
+            return hasVariables(op.left) || hasVariables(op.right);
+        }
+        return false;
+    }
+
+    protected static Expression collapseIfConstant(Expression e) {
+        if (!hasVariables(e)) {
+            return new Number(e.eval(""));
+        }
+        return e;
+    }
+
+    @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null) return false;
