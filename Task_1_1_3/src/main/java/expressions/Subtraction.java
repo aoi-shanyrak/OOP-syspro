@@ -22,7 +22,9 @@ public class Subtraction extends Operation {
      */
     @Override
     protected Expression simplifyOp(Expression l, Expression r) {
-        if (l.equals(r)) return new Number(0);
+        if (l.equals(r)) {
+            return new Number(0);
+        }
         return collapseIfConstant(new Subtraction(l, r));
     }
 

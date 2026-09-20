@@ -5,6 +5,7 @@ import java.io.PrintStream;
 /**
  * Abstract base for binary operations: addition, subtraction,
  * multiplication and division.
+ *
  * <p>
  * Holds the two operands and the operator symbol. Provides shared
  * printing, equality, hashing and simplification entry point.
@@ -91,8 +92,12 @@ public abstract class Operation extends Expression {
      */
     @Override
     public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || this.getClass() != o.getClass()) return false;
+        if (this == o) {
+            return true;
+        }
+        if (o == null || this.getClass() != o.getClass()) {
+            return false;
+        }
         Operation other = (Operation) o;
         return this.left.equals(other.left) && this.right.equals(other.right);
     }

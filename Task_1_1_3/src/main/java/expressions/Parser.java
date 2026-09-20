@@ -4,6 +4,7 @@ import java.util.regex.Pattern;
 
 /**
  * Recursive-descent parser for mathematical expressions.
+ *
  * <p>
  * Accepts both fully parenthesized input like {@code "(3+(2*x))"}
  * and bare input like {@code "3+2*x"}. Operator precedence is
@@ -52,8 +53,9 @@ public class Parser {
         int depth = 0;
         for (int i = 0; i < s.length(); i++) {
             char c = s.charAt(i);
-            if (c == '(') depth++;
-            else if (c == ')') {
+            if (c == '(') {
+                depth++;
+            } else if (c == ')') {
                 depth--;
                 if (depth == 0) {
                     return i == s.length() - 1 ? s.substring(1, i).trim() : s;
@@ -75,9 +77,11 @@ public class Parser {
         int depth = 0;
         for (int i = s.length() - 1; i >= 0; i--) {
             char c = s.charAt(i);
-            if (c == ')') depth++;
-            else if (c == '(') depth--;
-            else if (depth == 0 && ops.indexOf(c) >= 0) {
+            if (c == ')') {
+                depth++;
+            } else if (c == '(') {
+                depth--;
+            } else if (depth == 0 && ops.indexOf(c) >= 0) {
                 return i;
             }
         }

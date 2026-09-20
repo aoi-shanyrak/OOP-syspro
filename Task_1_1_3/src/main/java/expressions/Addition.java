@@ -22,8 +22,12 @@ public class Addition extends Operation {
      */
     @Override
     protected Expression simplifyOp(Expression l, Expression r) {
-        if (isZero(l)) return r;
-        if (isZero(r)) return l;
+        if (isZero(l)) {
+            return r;
+        }
+        if (isZero(r)) {
+            return l;
+        }
         return collapseIfConstant(new Addition(l, r));
     }
 
