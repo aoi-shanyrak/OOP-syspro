@@ -64,7 +64,7 @@ loadScripts(document, 'script');</script>
 <dl class="index">
 <dt><a href="expressions/Operation.html#collapseIfConstant(expressions.Expression)" class="member-name-link">collapseIfConstant(Expression)</a> - Static method in class expressions.<a href="expressions/Operation.html" title="class in expressions">Operation</a></dt>
 <dd>
-<div class="block">Collapses the expression to a <code>Number</code> if it contains
+<div class="block">Collapses the expression to a <a href="expressions/Number.html" title="class in expressions"><code>Number</code></a> if it contains
  no variables; otherwise returns it unchanged.</div>
 </dd>
 </dl>
@@ -179,10 +179,6 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns the right operand.</div>
 </dd>
-<dt><a href="expressions/Number.html#getValue()" class="member-name-link">getValue()</a> - Method in class expressions.<a href="expressions/Number.html" title="class in expressions">Number</a></dt>
-<dd>
-<div class="block">Returns the value of this constant.</div>
-</dd>
 </dl>
 <h2 class="title" id="I:H">H</h2>
 <dl class="index">
@@ -202,20 +198,40 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Returns a hash code consistent with <a href="expressions/Expression.html#equals(java.lang.Object)"><code>Expression.equals(Object)</code></a>.</div>
 </dd>
-<dt><a href="expressions/Operation.html#hasVariables(expressions.Expression)" class="member-name-link">hasVariables(Expression)</a> - Static method in class expressions.<a href="expressions/Operation.html" title="class in expressions">Operation</a></dt>
+<dt><a href="expressions/Expression.html#hasVariables()" class="member-name-link">hasVariables()</a> - Method in class expressions.<a href="expressions/Expression.html" title="class in expressions">Expression</a></dt>
 <dd>
-<div class="block">Checks whether the expression contains at least one variable.</div>
+<div class="block">Checks whether this expression contains at least one variable.</div>
+</dd>
+<dt><a href="expressions/Number.html#hasVariables()" class="member-name-link">hasVariables()</a> - Method in class expressions.<a href="expressions/Number.html" title="class in expressions">Number</a></dt>
+<dd>
+<div class="block">Checks whether this expression contains at least one variable.</div>
+</dd>
+<dt><a href="expressions/Operation.html#hasVariables()" class="member-name-link">hasVariables()</a> - Method in class expressions.<a href="expressions/Operation.html" title="class in expressions">Operation</a></dt>
+<dd>
+<div class="block">Checks whether this expression contains at least one variable.</div>
+</dd>
+<dt><a href="expressions/Variable.html#hasVariables()" class="member-name-link">hasVariables()</a> - Method in class expressions.<a href="expressions/Variable.html" title="class in expressions">Variable</a></dt>
+<dd>
+<div class="block">Checks whether this expression contains at least one variable.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:I">I</h2>
 <dl class="index">
+<dt><a href="expressions/Number.html#isOne()" class="member-name-link">isOne()</a> - Method in class expressions.<a href="expressions/Number.html" title="class in expressions">Number</a></dt>
+<dd>
+<div class="block">Checks whether this constant is equal to one.</div>
+</dd>
 <dt><a href="expressions/Operation.html#isOne(expressions.Expression)" class="member-name-link">isOne(Expression)</a> - Static method in class expressions.<a href="expressions/Operation.html" title="class in expressions">Operation</a></dt>
 <dd>
-<div class="block">Checks whether the expression is the constant one.</div>
+<div class="block">Checks whether the expression is a <a href="expressions/Number.html" title="class in expressions"><code>Number</code></a> equal to one.</div>
+</dd>
+<dt><a href="expressions/Number.html#isZero()" class="member-name-link">isZero()</a> - Method in class expressions.<a href="expressions/Number.html" title="class in expressions">Number</a></dt>
+<dd>
+<div class="block">Checks whether this constant is equal to zero.</div>
 </dd>
 <dt><a href="expressions/Operation.html#isZero(expressions.Expression)" class="member-name-link">isZero(Expression)</a> - Static method in class expressions.<a href="expressions/Operation.html" title="class in expressions">Operation</a></dt>
 <dd>
-<div class="block">Checks whether the expression is the constant zero.</div>
+<div class="block">Checks whether the expression is a <a href="expressions/Number.html" title="class in expressions"><code>Number</code></a> equal to zero.</div>
 </dd>
 </dl>
 <h2 class="title" id="I:L">L</h2>

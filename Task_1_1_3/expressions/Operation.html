@@ -151,7 +151,7 @@ loadScripts(document, 'script');</script>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>protected static <a href="Expression.html" title="class in expressions">Expression</a></code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#collapseIfConstant(expressions.Expression)" class="member-name-link">collapseIfConstant</a><wbr>(<a href="Expression.html" title="class in expressions">Expression</a>&nbsp;e)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Collapses the expression to a <code>Number</code> if it contains
+<div class="block">Collapses the expression to a <a href="Number.html" title="class in expressions"><code>Number</code></a> if it contains
  no variables; otherwise returns it unchanged.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
@@ -174,20 +174,20 @@ loadScripts(document, 'script');</script>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code consistent with <a href="Expression.html#equals(java.lang.Object)"><code>Expression.equals(Object)</code></a>.</div>
 </div>
-<div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>protected static boolean</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#hasVariables(expressions.Expression)" class="member-name-link">hasVariables</a><wbr>(<a href="Expression.html" title="class in expressions">Expression</a>&nbsp;e)</code></div>
-<div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Checks whether the expression contains at least one variable.</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasVariables()" class="member-name-link">hasVariables</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Checks whether this expression contains at least one variable.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>protected static boolean</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isOne(expressions.Expression)" class="member-name-link">isOne</a><wbr>(<a href="Expression.html" title="class in expressions">Expression</a>&nbsp;e)</code></div>
 <div class="col-last even-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Checks whether the expression is the constant one.</div>
+<div class="block">Checks whether the expression is a <a href="Number.html" title="class in expressions"><code>Number</code></a> equal to one.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code>protected static boolean</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4"><code><a href="#isZero(expressions.Expression)" class="member-name-link">isZero</a><wbr>(<a href="Expression.html" title="class in expressions">Expression</a>&nbsp;e)</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab1 method-summary-table-tab4">
-<div class="block">Checks whether the expression is the constant zero.</div>
+<div class="block">Checks whether the expression is a <a href="Number.html" title="class in expressions"><code>Number</code></a> equal to zero.</div>
 </div>
 <div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#print(java.io.PrintStream)" class="member-name-link">print</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;out)</code></div>
@@ -332,6 +332,19 @@ loadScripts(document, 'script');</script>
 </section>
 </li>
 <li>
+<section class="detail" id="hasVariables()">
+<h3>hasVariables</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasVariables</span>()</div>
+<div class="block">Checks whether this expression contains at least one variable.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Expression.html#hasVariables()">hasVariables</a></code>&nbsp;in class&nbsp;<code><a href="Expression.html" title="class in expressions">Expression</a></code></dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if a <a href="Variable.html" title="class in expressions"><code>Variable</code></a> occurs anywhere in the tree</dd>
+</dl>
+</section>
+</li>
+<li>
 <section class="detail" id="print(java.io.PrintStream)">
 <h3>print</h3>
 <div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">void</span>&nbsp;<span class="element-name">print</span><wbr><span class="parameters">(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;out)</span></div>
@@ -382,7 +395,7 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="collapseIfConstant(expressions.Expression)">
 <h3>collapseIfConstant</h3>
 <div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type"><a href="Expression.html" title="class in expressions">Expression</a></span>&nbsp;<span class="element-name">collapseIfConstant</span><wbr><span class="parameters">(<a href="Expression.html" title="class in expressions">Expression</a>&nbsp;e)</span></div>
-<div class="block">Collapses the expression to a <code>Number</code> if it contains
+<div class="block">Collapses the expression to a <a href="Number.html" title="class in expressions"><code>Number</code></a> if it contains
  no variables; otherwise returns it unchanged.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
@@ -396,12 +409,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="isZero(expressions.Expression)">
 <h3>isZero</h3>
 <div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isZero</span><wbr><span class="parameters">(<a href="Expression.html" title="class in expressions">Expression</a>&nbsp;e)</span></div>
-<div class="block">Checks whether the expression is the constant zero.</div>
+<div class="block">Checks whether the expression is a <a href="Number.html" title="class in expressions"><code>Number</code></a> equal to zero.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>e</code> - expression to check</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if <code>e</code> is <code>Number(0)</code></dd>
+<dd><code>true</code> if <code>e</code> is a zero constant</dd>
 </dl>
 </section>
 </li>
@@ -409,25 +422,12 @@ loadScripts(document, 'script');</script>
 <section class="detail" id="isOne(expressions.Expression)">
 <h3>isOne</h3>
 <div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isOne</span><wbr><span class="parameters">(<a href="Expression.html" title="class in expressions">Expression</a>&nbsp;e)</span></div>
-<div class="block">Checks whether the expression is the constant one.</div>
+<div class="block">Checks whether the expression is a <a href="Number.html" title="class in expressions"><code>Number</code></a> equal to one.</div>
 <dl class="notes">
 <dt>Parameters:</dt>
 <dd><code>e</code> - expression to check</dd>
 <dt>Returns:</dt>
-<dd><code>true</code> if <code>e</code> is <code>Number(1)</code></dd>
-</dl>
-</section>
-</li>
-<li>
-<section class="detail" id="hasVariables(expressions.Expression)">
-<h3>hasVariables</h3>
-<div class="member-signature"><span class="modifiers">protected static</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasVariables</span><wbr><span class="parameters">(<a href="Expression.html" title="class in expressions">Expression</a>&nbsp;e)</span></div>
-<div class="block">Checks whether the expression contains at least one variable.</div>
-<dl class="notes">
-<dt>Parameters:</dt>
-<dd><code>e</code> - expression to inspect</dd>
-<dt>Returns:</dt>
-<dd><code>true</code> if a <a href="Variable.html" title="class in expressions"><code>Variable</code></a> occurs anywhere in the tree</dd>
+<dd><code>true</code> if <code>e</code> is a one constant</dd>
 </dl>
 </section>
 </li>

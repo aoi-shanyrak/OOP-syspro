@@ -125,14 +125,24 @@ loadScripts(document, 'script');</script>
 <div class="block">Evaluates this expression for the given assignment of variables.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#getValue()" class="member-name-link">getValue</a>()</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
 <div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
-<div class="block">Returns the value of this constant.</div>
-</div>
-<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>int</code></div>
-<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hashCode()" class="member-name-link">hashCode</a>()</code></div>
-<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
 <div class="block">Returns a hash code consistent with <a href="Expression.html#equals(java.lang.Object)"><code>Expression.equals(Object)</code></a>.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#hasVariables()" class="member-name-link">hasVariables</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Checks whether this expression contains at least one variable.</div>
+</div>
+<div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isOne()" class="member-name-link">isOne</a>()</code></div>
+<div class="col-last odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Checks whether this constant is equal to one.</div>
+</div>
+<div class="col-first even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>boolean</code></div>
+<div class="col-second even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#isZero()" class="member-name-link">isZero</a>()</code></div>
+<div class="col-last even-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4">
+<div class="block">Checks whether this constant is equal to zero.</div>
 </div>
 <div class="col-first odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code>void</code></div>
 <div class="col-second odd-row-color method-summary-table method-summary-table-tab2 method-summary-table-tab4"><code><a href="#print(java.io.PrintStream)" class="member-name-link">print</a><wbr>(<a href="https://docs.oracle.com/en/java/javase/17/docs/api/java.base/java/io/PrintStream.html" title="class or interface in java.io" class="external-link">PrintStream</a>&nbsp;out)</code></div>
@@ -184,13 +194,24 @@ loadScripts(document, 'script');</script>
 <h2>Method Details</h2>
 <ul class="member-list">
 <li>
-<section class="detail" id="getValue()">
-<h3>getValue</h3>
-<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">int</span>&nbsp;<span class="element-name">getValue</span>()</div>
-<div class="block">Returns the value of this constant.</div>
+<section class="detail" id="isZero()">
+<h3>isZero</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isZero</span>()</div>
+<div class="block">Checks whether this constant is equal to zero.</div>
 <dl class="notes">
 <dt>Returns:</dt>
-<dd>the integer value</dd>
+<dd><code>true</code> if the value is 0</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="isOne()">
+<h3>isOne</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">isOne</span>()</div>
+<div class="block">Checks whether this constant is equal to one.</div>
+<dl class="notes">
+<dt>Returns:</dt>
+<dd><code>true</code> if the value is 1</dd>
 </dl>
 </section>
 </li>
@@ -205,6 +226,19 @@ loadScripts(document, 'script');</script>
 <dd><code><a href="Expression.html#simplify()">simplify</a></code>&nbsp;in class&nbsp;<code><a href="Expression.html" title="class in expressions">Expression</a></code></dd>
 <dt>Returns:</dt>
 <dd>a new simplified expression</dd>
+</dl>
+</section>
+</li>
+<li>
+<section class="detail" id="hasVariables()">
+<h3>hasVariables</h3>
+<div class="member-signature"><span class="modifiers">public</span>&nbsp;<span class="return-type">boolean</span>&nbsp;<span class="element-name">hasVariables</span>()</div>
+<div class="block">Checks whether this expression contains at least one variable. A constant has no variables.</div>
+<dl class="notes">
+<dt>Specified by:</dt>
+<dd><code><a href="Expression.html#hasVariables()">hasVariables</a></code>&nbsp;in class&nbsp;<code><a href="Expression.html" title="class in expressions">Expression</a></code></dd>
+<dt>Returns:</dt>
+<dd><code>true</code> if a <a href="Variable.html" title="class in expressions"><code>Variable</code></a> occurs anywhere in the tree</dd>
 </dl>
 </section>
 </li>
