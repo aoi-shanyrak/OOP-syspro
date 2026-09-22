@@ -24,6 +24,12 @@ public class Variable extends Expression {
         return this;
     }
 
+    /** {@inheritDoc} A variable is a variable. */
+    @Override
+    public boolean hasVariables() {
+        return true;
+    }
+
     /** {@inheritDoc}
      * The derivative of a variable with respect to itself is 1,
      * and 0 with respect to any other variable.
@@ -40,11 +46,15 @@ public class Variable extends Expression {
     @Override
     public int eval(String assignments) {
         String[] pairs = assignments.split(";");
+
         for (String pair : pairs) {
             String[] parts = pair.split("=");
-            if (parts.length != 2) {
-                continue;
+            if (parts.length != 2 || parts[0].trim().isEmpty() || parts[1].trim().isEmpty()) {
+                throw new IllegalArgumentException("Invalid assignment: \"" + pair.trim() + "\"");
             }
+        }
+        for (String pair : pairs) {
+            String[] parts = pair.split("=");
             String key = parts[0].trim();
             String value = parts[1].trim();
             if (key.equals(name)) {

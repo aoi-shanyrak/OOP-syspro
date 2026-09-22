@@ -41,4 +41,22 @@ class NumberTest {
     void equalsDifferentType() {
         assertNotEquals(new Number(5), new Variable("x"));
     }
+
+    @Test
+    void isZeroTrueForZero() {
+        assertTrue(new Number(0).isZero());
+        assertFalse(new Number(1).isZero());
+    }
+
+    @Test
+    void isOneTrueForOne() {
+        assertTrue(new Number(1).isOne());
+        assertFalse(new Number(0).isOne());
+        assertFalse(new Number(2).isOne());
+    }
+
+    @Test
+    void numberHasNoVariables() {
+        assertFalse(new Number(5).hasVariables());
+    }
 }

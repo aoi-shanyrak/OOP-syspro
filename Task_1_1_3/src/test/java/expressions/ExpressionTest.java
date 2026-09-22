@@ -44,4 +44,35 @@ class ExpressionTest {
         Expression e = new Addition(new Variable("x"), new Variable("y"));
         assertEquals(5, e.eval("x = 2; y = 3"));
     }
+
+    @Test
+    void additionWithOnlyNumbersHasNoVariables() {
+        Expression e = new Addition(new Number(3), new Number(5));
+        assertFalse(e.hasVariables());
+    }
+
+    @Test
+    void additionWithVariableHasVariables() {
+        Expression e = new Addition(new Number(3), new Variable("x"));
+        assertTrue(e.hasVariables());
+    }
+
+    @Test
+    void deeplyNestedHasVariables() {
+        // (0 + (1 * (2 * x)))
+        Expression e = new Addition(
+                new Number(0),
+                new Multiplication(new Number(1),
+                        new Multiplication(new Number(2), new Variable("x"))));
+        assertTrue(e.hasVariables());
+    }
+
+    @Test
+    void deeplyNestedWithoutVariables() {
+        Expression e = new Addition(
+                new Number(0),
+                new Multiplication(new Number(1),
+                        new Multiplication(new Number(2), new Number(5))));
+        assertFalse(e.hasVariables());
+    }
 }

@@ -72,6 +72,12 @@ public abstract class Operation extends Expression {
      */
     protected abstract Expression simplifyOp(Expression l, Expression r);
 
+    /** {@inheritDoc} */
+    @Override
+    public boolean hasVariables() {
+        return left.hasVariables() || right.hasVariables();
+    }
+
     /**
      * {@inheritDoc}
      * Prints operands separated by the operator, wrapped in parentheses.
@@ -111,53 +117,35 @@ public abstract class Operation extends Expression {
         return result;
     }
 
-    // ---------- Helpers for subclasses ----------
-
     /**
-     * Collapses the expression to a {@code Number} if it contains
+     * Collapses the expression to a {@link Number} if it contains
      * no variables; otherwise returns it unchanged.
      *
      * @param e expression to collapse
      * @return a constant number or the original expression
      */
     protected static Expression collapseIfConstant(Expression e) {
-        return hasVariables(e) ? e : new Number(e.eval(""));
+        return e.hasVariables() ? e : new Number(e.eval(""));
     }
 
     /**
-     * Checks whether the expression is the constant zero.
+     * Checks whether the expression is a {@link Number} equal to zero.
      *
      * @param e expression to check
-     * @return {@code true} if {@code e} is {@code Number(0)}
+     * @return {@code true} if {@code e} is a zero constant
      */
     protected static boolean isZero(Expression e) {
-        return e instanceof Number && ((Number) e).getValue() == 0;
+        return e instanceof Number && ((Number) e).isZero();
     }
 
     /**
-     * Checks whether the expression is the constant one.
+     * Checks whether the expression is a {@link Number} equal to one.
      *
      * @param e expression to check
-     * @return {@code true} if {@code e} is {@code Number(1)}
+     * @return {@code true} if {@code e} is a one constant
      */
     protected static boolean isOne(Expression e) {
-        return e instanceof Number && ((Number) e).getValue() == 1;
+        return e instanceof Number && ((Number) e).isOne();
     }
 
-    /**
-     * Checks whether the expression contains at least one variable.
-     *
-     * @param e expression to inspect
-     * @return {@code true} if a {@link Variable} occurs anywhere in the tree
-     */
-    protected static boolean hasVariables(Expression e) {
-        if (e instanceof Variable) {
-            return true;
-        }
-        if (e instanceof Operation) {
-            Operation op = (Operation) e;
-            return hasVariables(op.getLeft()) || hasVariables(op.getRight());
-        }
-        return false;
-    }
 }

@@ -22,6 +22,13 @@ public abstract class Expression {
     public abstract Expression simplify();
 
     /**
+     * Checks whether this expression contains at least one variable.
+     *
+     * @return {@code true} if a {@link Variable} occurs anywhere in the tree
+     */
+    public abstract boolean hasVariables();
+
+    /**
      * Returns the derivative of this expression with respect to
      * the given variable.
      * The original expression is not modified.

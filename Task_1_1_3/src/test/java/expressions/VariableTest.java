@@ -63,4 +63,55 @@ public class VariableTest {
     void equalsDifferentType() {
         assertNotEquals(new Variable("x"), new Number(1));
     }
+
+    @Test
+    void evalRejectsAssignmentWithoutEquals() {
+        Variable x = new Variable("x");
+        IllegalArgumentException ex = assertThrows(
+                IllegalArgumentException.class,
+                () -> x.eval("x = 10; garbage")
+        );
+        assertTrue(ex.getMessage().contains("garbage"));
+    }
+
+    @Test
+    void evalRejectsEmptyValue() {
+        Variable x = new Variable("x");
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> x.eval("x = 10; = 5")
+        );
+    }
+
+    @Test
+    void evalRejectsTooManyEquals() {
+        Variable x = new Variable("x");
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> x.eval("x = 10; y = 5 = 6")
+        );
+    }
+
+    @Test
+    void evalRejectsEmptySegment() {
+        Variable x = new Variable("x");
+        assertThrows(
+                IllegalArgumentException.class,
+                () -> x.eval("x = 10;; y = 5")
+        );
+    }
+
+    @Test
+    void evalRejectsNonNumericValue() {
+        Variable x = new Variable("x");
+        assertThrows(
+                NumberFormatException.class,
+                () -> x.eval("x = abc")
+        );
+    }
+
+    @Test
+    void variableHasVariables() {
+        assertTrue(new Variable("x").hasVariables());
+    }
 }
