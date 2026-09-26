@@ -10,7 +10,7 @@ import java.util.Set;
 
 /**
  * Graph stored as an adjacency list with weights:
- * for each vertex, a map from neighbor to edge weight.
+ * for each vertex a map from neighbor to edge weight.
  */
 public class AdjacencyListGraph extends AbstractGraph {
 
