@@ -10,6 +10,7 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.stream.Stream;
+import java.util.function.Supplier;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -22,10 +23,13 @@ class FileInputTest {
     Path tempDir;
 
     static Stream<Arguments> implementations() {
+        Supplier<Graph> list      = AdjacencyListGraph::new;
+        Supplier<Graph> matrix    = AdjacencyMatrixGraph::new;
+        Supplier<Graph> incidence = IncidenceMatrixGraph::new;
         return Stream.of(
-                Arguments.of("list",      (java.util.function.Supplier<Graph>) AdjacencyListGraph::new),
-                Arguments.of("matrix",    (java.util.function.Supplier<Graph>) AdjacencyMatrixGraph::new),
-                Arguments.of("incidence", (java.util.function.Supplier<Graph>) IncidenceMatrixGraph::new)
+                Arguments.of("list",      list),
+                Arguments.of("matrix",    matrix),
+                Arguments.of("incidence", incidence)
         );
     }
 
